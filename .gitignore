@@ -1,0 +1,19 @@
+# Ignora tutte le cartelle "bin" (case-insensitive)
+**/[Bb]in/
+
+# Ignora tutte le cartelle "obj" (case-insensitive)
+**/[Oo]bj/
+
+# Ignora tutte le cartelle "vs" (ad es. per Visual Studio; se si chiama ".vs", usa **/.vs/)
+**/vs/
+
+**/*.vsidx
+**/*.bin
+**/*.v2
+**/*.suo
+**/*.db
+**/*.db-shm
+**/*.db-wal
+
+
+

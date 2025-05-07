@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36105.17 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltimaOnlineObjectDetector", "UltimaOnlineObjectDetector.csproj", "{BFBFCE64-CF6E-4066-B450-9B3921213063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Test\Test.csproj", "{240075E6-3DCB-43C3-BD6D-961E6CF6AB31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFBFCE64-CF6E-4066-B450-9B3921213063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBFCE64-CF6E-4066-B450-9B3921213063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBFCE64-CF6E-4066-B450-9B3921213063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBFCE64-CF6E-4066-B450-9B3921213063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{240075E6-3DCB-43C3-BD6D-961E6CF6AB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{240075E6-3DCB-43C3-BD6D-961E6CF6AB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{240075E6-3DCB-43C3-BD6D-961E6CF6AB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{240075E6-3DCB-43C3-BD6D-961E6CF6AB31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {391DCB61-DE60-4745-B04D-85B8793105EE}
+	EndGlobalSection
+EndGlobal
