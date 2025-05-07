@@ -1,0 +1,1703 @@
+=== REPORT RILEVAMENTO MULI CON YOLO ===
+Data e ora: 2025-05-07 12:17:13
+
+Soglia di confidenza: 0.3
+
+Totale immagini elaborate: 281
+- Immagini di muli: 132
+- Immagini non-muli: 149
+
+Muli rilevati correttamente: 126
+Muli non rilevati: 6
+Falsi positivi: 0
+
+Tasso di successo: 95.45%
+Tasso di fallimento: 4.55%
+
+=== DETTAGLI ELABORAZIONE ===
+Immagine: Mulo1.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.44
+  Coordinate: (89, 69)
+
+Immagine: Mulo10.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.42
+  Coordinate: (50, 56)
+
+Immagine: Mulo100.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.37
+  Coordinate: (89, 70)
+
+Immagine: Mulo101.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.56
+  Coordinate: (63, 96)
+
+Immagine: Mulo102.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.38
+  Coordinate: (88, 84)
+
+Immagine: Mulo103.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.41
+  Coordinate: (87, 72)
+
+Immagine: Mulo104.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.40
+  Coordinate: (85, 104)
+
+Immagine: Mulo105.png
+  Categoria: Mulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: Mulo106.png
+  Categoria: Mulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: Mulo107.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.59
+  Coordinate: (54, 107)
+
+Immagine: Mulo108.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.61
+  Coordinate: (56, 83)
+
+Immagine: Mulo109.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.40
+  Coordinate: (53, 67)
+
+Immagine: Mulo11.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.47
+  Coordinate: (129, 55)
+
+Immagine: Mulo110.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.53
+  Coordinate: (101, 87)
+
+Immagine: Mulo111.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.51
+  Coordinate: (91, 55)
+
+Immagine: Mulo112.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.47
+  Coordinate: (76, 69)
+
+Immagine: Mulo113.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.60
+  Coordinate: (101, 77)
+
+Immagine: Mulo114.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.56
+  Coordinate: (49, 82)
+
+Immagine: Mulo115.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.61
+  Coordinate: (97, 55)
+
+Immagine: Mulo116.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.51
+  Coordinate: (66, 59)
+
+Immagine: Mulo117.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.41
+  Coordinate: (61, 96)
+
+Immagine: Mulo118.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.61
+  Coordinate: (128, 98)
+
+Immagine: Mulo119.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.51
+  Coordinate: (81, 62)
+
+Immagine: Mulo12.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.42
+  Coordinate: (56, 81)
+
+Immagine: Mulo120.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.47
+  Coordinate: (71, 53)
+
+Immagine: Mulo121.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.37
+  Coordinate: (67, 47)
+
+Immagine: Mulo122.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.64
+  Coordinate: (78, 67)
+
+Immagine: Mulo123.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.47
+  Coordinate: (95, 62)
+
+Immagine: Mulo124.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.48
+  Coordinate: (133, 59)
+
+Immagine: Mulo125.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.56
+  Coordinate: (102, 70)
+
+Immagine: Mulo126.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.67
+  Coordinate: (61, 88)
+
+Immagine: Mulo127.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.51
+  Coordinate: (60, 59)
+
+Immagine: Mulo128.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.48
+  Coordinate: (91, 81)
+
+Immagine: Mulo129.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.41
+  Coordinate: (88, 66)
+
+Immagine: Mulo13.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.45
+  Coordinate: (114, 83)
+
+Immagine: Mulo130.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.63
+  Coordinate: (76, 88)
+
+Immagine: Mulo131.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.40
+  Coordinate: (73, 47)
+
+Immagine: Mulo132.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.35
+  Coordinate: (55, 51)
+
+Immagine: Mulo133.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.54
+  Coordinate: (112, 61)
+
+Immagine: Mulo134.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.40
+  Coordinate: (84, 84)
+
+Immagine: Mulo14.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.35
+  Coordinate: (92, 64)
+
+Immagine: Mulo15.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.50
+  Coordinate: (73, 84)
+
+Immagine: Mulo16.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.44
+  Coordinate: (69, 73)
+
+Immagine: Mulo17.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.38
+  Coordinate: (62, 83)
+
+Immagine: Mulo18.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.42
+  Coordinate: (57, 85)
+
+Immagine: Mulo19.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.47
+  Coordinate: (78, 78)
+
+Immagine: Mulo2.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.42
+  Coordinate: (50, 56)
+
+Immagine: Mulo20.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.49
+  Coordinate: (75, 77)
+
+Immagine: Mulo21.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.37
+  Coordinate: (75, 61)
+
+Immagine: Mulo22.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.48
+  Coordinate: (105, 70)
+
+Immagine: Mulo23.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.32
+  Coordinate: (60, 44)
+
+Immagine: Mulo24.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.35
+  Coordinate: (57, 51)
+
+Immagine: Mulo25.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.39
+  Coordinate: (53, 45)
+
+Immagine: Mulo27.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.47
+  Coordinate: (50, 50)
+
+Immagine: Mulo28.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.47
+  Coordinate: (105, 70)
+
+Immagine: Mulo29.png
+  Categoria: Mulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: Mulo3.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.47
+  Coordinate: (129, 55)
+
+Immagine: Mulo30.png
+  Categoria: Mulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: Mulo31.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.36
+  Coordinate: (85, 56)
+
+Immagine: Mulo32.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.38
+  Coordinate: (80, 66)
+
+Immagine: Mulo33.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.48
+  Coordinate: (36, 80)
+
+Immagine: Mulo34.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.46
+  Coordinate: (61, 41)
+
+Immagine: Mulo35.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.53
+  Coordinate: (72, 52)
+
+Immagine: Mulo36.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.59
+  Coordinate: (68, 69)
+
+Immagine: Mulo37.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.54
+  Coordinate: (126, 104)
+
+Immagine: Mulo38.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.46
+  Coordinate: (114, 52)
+
+Immagine: Mulo39.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.40
+  Coordinate: (81, 107)
+
+Immagine: Mulo4.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.42
+  Coordinate: (56, 81)
+
+Immagine: Mulo40.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.54
+  Coordinate: (90, 62)
+
+Immagine: Mulo41.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.48
+  Coordinate: (56, 46)
+
+Immagine: Mulo42.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.43
+  Coordinate: (104, 55)
+
+Immagine: Mulo43.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.60
+  Coordinate: (67, 119)
+
+Immagine: Mulo44.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.45
+  Coordinate: (97, 70)
+
+Immagine: Mulo45.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.54
+  Coordinate: (112, 75)
+
+Immagine: Mulo46.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.48
+  Coordinate: (98, 99)
+
+Immagine: Mulo47.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.64
+  Coordinate: (58, 113)
+
+Immagine: Mulo48.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.68
+  Coordinate: (156, 117)
+
+Immagine: Mulo49.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.59
+  Coordinate: (66, 111)
+
+Immagine: Mulo5.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.33
+  Coordinate: (66, 40)
+
+Immagine: Mulo50.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.67
+  Coordinate: (69, 66)
+
+Immagine: Mulo51.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.45
+  Coordinate: (49, 54)
+
+Immagine: Mulo52.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.39
+  Coordinate: (82, 53)
+
+Immagine: Mulo53.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.53
+  Coordinate: (73, 87)
+
+Immagine: Mulo54.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.61
+  Coordinate: (111, 48)
+
+Immagine: Mulo55.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.62
+  Coordinate: (37, 93)
+
+Immagine: Mulo56.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.45
+  Coordinate: (58, 60)
+
+Immagine: Mulo57.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.44
+  Coordinate: (148, 141)
+
+Immagine: Mulo58.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.48
+  Coordinate: (66, 82)
+
+Immagine: Mulo59.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.52
+  Coordinate: (64, 59)
+
+Immagine: Mulo6.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.36
+  Coordinate: (96, 67)
+
+Immagine: Mulo60.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.48
+  Coordinate: (107, 84)
+
+Immagine: Mulo61.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.40
+  Coordinate: (79, 61)
+
+Immagine: Mulo62.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.44
+  Coordinate: (72, 63)
+
+Immagine: Mulo63.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.49
+  Coordinate: (96, 52)
+
+Immagine: Mulo64.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.42
+  Coordinate: (65, 66)
+
+Immagine: Mulo65.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.34
+  Coordinate: (58, 47)
+
+Immagine: Mulo66.png
+  Categoria: Mulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: Mulo67.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.36
+  Coordinate: (52, 44)
+
+Immagine: Mulo68.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.40
+  Coordinate: (91, 70)
+
+Immagine: Mulo69.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.44
+  Coordinate: (83, 118)
+
+Immagine: Mulo7.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.59
+  Coordinate: (70, 42)
+
+Immagine: Mulo70.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.43
+  Coordinate: (74, 44)
+
+Immagine: Mulo71.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.34
+  Coordinate: (65, 90)
+
+Immagine: Mulo72.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.58
+  Coordinate: (66, 84)
+
+Immagine: Mulo73.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.38
+  Coordinate: (80, 71)
+
+Immagine: Mulo74.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.38
+  Coordinate: (57, 48)
+
+Immagine: Mulo75.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.44
+  Coordinate: (62, 43)
+
+Immagine: Mulo76.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.43
+  Coordinate: (102, 69)
+
+Immagine: Mulo77.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.40
+  Coordinate: (43, 75)
+
+Immagine: Mulo78.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.49
+  Coordinate: (60, 75)
+
+Immagine: Mulo79.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.66
+  Coordinate: (73, 82)
+
+Immagine: Mulo8.png
+  Categoria: Mulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: Mulo80.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.43
+  Coordinate: (78, 74)
+
+Immagine: Mulo81.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.55
+  Coordinate: (77, 83)
+
+Immagine: Mulo82.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.44
+  Coordinate: (78, 86)
+
+Immagine: Mulo83.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.65
+  Coordinate: (105, 76)
+
+Immagine: Mulo84.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.50
+  Coordinate: (149, 130)
+
+Immagine: Mulo85.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.51
+  Coordinate: (112, 85)
+
+Immagine: Mulo86.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.58
+  Coordinate: (55, 54)
+
+Immagine: Mulo87.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.51
+  Coordinate: (73, 75)
+
+Immagine: Mulo88.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.59
+  Coordinate: (50, 98)
+
+Immagine: Mulo89.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.62
+  Coordinate: (128, 85)
+
+Immagine: Mulo9.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.42
+  Coordinate: (88, 66)
+
+Immagine: Mulo90.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.63
+  Coordinate: (128, 128)
+
+Immagine: Mulo91.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.55
+  Coordinate: (75, 105)
+
+Immagine: Mulo92.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.48
+  Coordinate: (81, 75)
+
+Immagine: Mulo93.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.42
+  Coordinate: (52, 72)
+
+Immagine: Mulo94.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.59
+  Coordinate: (101, 85)
+
+Immagine: Mulo95.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.53
+  Coordinate: (81, 60)
+
+Immagine: Mulo96.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.54
+  Coordinate: (92, 65)
+
+Immagine: Mulo97.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.38
+  Coordinate: (61, 45)
+
+Immagine: Mulo98.png
+  Categoria: Mulo
+  Stato: success
+  Metodo di rilevamento: yolo_detection_0.43
+  Coordinate: (66, 63)
+
+Immagine: NonMulo1.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo10.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo100.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo101.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo102.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo103.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo104.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo105.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo106.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo107.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo108.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo109.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo11.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo110.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo111.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo112.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo113.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo114.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo115.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo116.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo117.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo118.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo119.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo12.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo120.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo121.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo122.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo123.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo124.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo125.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo126.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo127.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo128.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo129.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo13.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo130.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo131.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo132.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo133.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo134.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo135.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo136.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo137.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo138.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo139.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo14.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo140.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo141.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo142.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo143.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo144.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo145.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo146.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo147.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo148.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo149.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo15.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo16.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo17.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo18.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo19.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo2.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo20.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo21.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo22.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo23.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo24.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo25.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo26.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo27.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo28.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo29.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo3.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo30.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo31.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo32.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo33.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo34.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo35.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo36.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo37.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo38.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo39.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo4.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo40.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo41.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo42.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo43.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo44.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo45.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo46.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo47.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo48.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo49.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo5.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo50.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo51.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo52.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo53.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo54.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo55.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo56.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo57.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo58.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo59.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo6.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo60.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo61.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo62.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo63.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo64.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo65.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo66.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo67.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo68.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo69.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo7.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo70.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo71.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo72.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo73.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo74.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo75.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo76.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo77.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo78.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo79.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo8.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo80.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo81.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo82.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo83.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo84.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo85.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo86.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo87.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo88.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo89.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo9.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo90.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo91.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo92.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo93.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo94.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo95.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo96.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo97.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo98.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
+Immagine: NonMulo99.png
+  Categoria: NonMulo
+  Stato: failed
+  Metodo di rilevamento: yolo_no_detection
+  Coordinate: None
+
