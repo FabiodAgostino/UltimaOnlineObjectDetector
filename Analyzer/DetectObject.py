@@ -4,9 +4,9 @@ import numpy as np
 from PIL import Image
 from ultralytics import YOLO
 
-def detect_object(image_path, model_path="best.pt", confidence_threshold=0.5):
+def detect_mulo(image_path, model_path="best.pt", confidence_threshold=0.5):
     """
-    Analizza un'immagine per rilevare oggetti (muli o lama).
+    Analizza un'immagine per rilevare un mulo.
     
     Args:
         image_path: Percorso dell'immagine da analizzare
@@ -14,7 +14,7 @@ def detect_object(image_path, model_path="best.pt", confidence_threshold=0.5):
         confidence_threshold: Soglia di confidenza minima per il rilevamento
         
     Returns:
-        Una tupla (class_id, x, y) con la classe dell'oggetto e le coordinate se trovato, None altrimenti
+        Una tupla (x, y) con le coordinate del mulo se trovato, None altrimenti
     """
     try:
         # Verifica che il file immagine esista
@@ -46,12 +46,6 @@ def detect_object(image_path, model_path="best.pt", confidence_threshold=0.5):
             # Trova l'indice del rilevamento con la confidenza più alta
             best_idx = np.argmax(confidences)
             
-            # Ottieni la classe del rilevamento
-            if hasattr(boxes, 'cls') and len(boxes.cls) > 0:
-                class_id = int(boxes.cls[best_idx].item())
-            else:
-                class_id = 0  # Default a mulo se non ci sono informazioni sulla classe
-            
             # Ottieni le coordinate della bounding box (x1, y1, x2, y2)
             box = boxes.xyxy.cpu().numpy()[best_idx]
             x1, y1, x2, y2 = box
@@ -60,8 +54,7 @@ def detect_object(image_path, model_path="best.pt", confidence_threshold=0.5):
             x_center = int((x1 + x2) / 2)
             y_center = int((y1 + y2) / 2)
             
-            # Restituisci la classe e le coordinate
-            return (class_id, x_center, y_center)
+            return (x_center, y_center)
         else:
             return None
     
@@ -72,15 +65,14 @@ def detect_object(image_path, model_path="best.pt", confidence_threshold=0.5):
 if __name__ == "__main__":
     # Controlla se è stato fornito un argomento (percorso immagine)
     if len(sys.argv) < 2:
-        print("Utilizzo: python detect_object.py <percorso_immagine>")
+        print("Utilizzo: python rileva_mulo.py <percorso_immagine>")
         sys.exit(1)
         
     image_path = sys.argv[1]
-    result = detect_object(image_path)
+    result = detect_mulo(image_path)
     
     if result:
-        class_id, x, y = result
-        class_name = "mulo" if class_id == 0 else "lama" if class_id == 1 else f"classe_{class_id}"
-        print(f"{class_name},{x},{y}")  # Output semplice per facile parsing
+        x, y = result
+        print(f"{x},{y}")  # Output semplice per facile parsing
     else:
-        print("null")  # Output "null" se non viene rilevato alcun oggetto
+        print("null")  # Output "null" se non viene rilevato alcun mulo
