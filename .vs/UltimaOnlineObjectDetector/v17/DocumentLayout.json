@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\fabio.dagostino\\Documents\\GitHub\\UltimaOnlineObjectDetector\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{240075E6-3DCB-43C3-BD6D-961E6CF6AB31}|..\\Test\\Test.csproj|c:\\users\\fabio.dagostino\\documents\\github\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BFBFCE64-CF6E-4066-B450-9B3921213063}|UltimaOnlineObjectDetector.csproj|c:\\users\\fabio.dagostino\\documents\\github\\ultimaonlineobjectdetector\\yolodetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFBFCE64-CF6E-4066-B450-9B3921213063}|UltimaOnlineObjectDetector.csproj|solutionrelative:yolodetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{240075E6-3DCB-43C3-BD6D-961E6CF6AB31}|..\\Test\\Test.csproj|c:\\users\\fabio.dagostino\\documents\\github\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,7 +49,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\fabio.dagostino\\Documents\\GitHub\\Test\\Program.cs",
               "RelativeDocumentMoniker": "..\\Test\\Program.cs",
@@ -62,15 +62,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "YoloDetector.cs",
               "DocumentMoniker": "C:\\Users\\fabio.dagostino\\Documents\\GitHub\\UltimaOnlineObjectDetector\\YoloDetector.cs",
               "RelativeDocumentMoniker": "YoloDetector.cs",
               "ToolTip": "C:\\Users\\fabio.dagostino\\Documents\\GitHub\\UltimaOnlineObjectDetector\\YoloDetector.cs",
               "RelativeToolTip": "YoloDetector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T12:08:36.947Z"
+              "WhenOpened": "2025-05-07T12:08:36.947Z",
+              "EditorCaption": ""
             }
           ]
         }

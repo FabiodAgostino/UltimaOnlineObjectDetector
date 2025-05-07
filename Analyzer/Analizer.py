@@ -20,6 +20,7 @@ class MuloDetector:
         self.dataset_dir = dataset_dir
         self.output_dir = output_dir
         self.mulo_dir = os.path.join(dataset_dir, "Mulo")
+        self.lama_dir = os.path.join(dataset_dir, "Lama")
         self.nonmulo_dir = os.path.join(dataset_dir, "NonMulo")
         self.results_dir = os.path.join(output_dir, "images")
         self.confidence_threshold = confidence_threshold
@@ -27,16 +28,19 @@ class MuloDetector:
         self.stats = {
             "total_images": 0,
             "mulo_images": 0,
+            "lama_images": 0,
             "nonmulo_images": 0,
             "processed_images": 0,
             "success_rate": 0,
             "failure_rate": 0,
             "mulo_detected": 0,
+            "lama_detected": 0,
             "mulo_not_detected": 0,
+            "lama_not_detected": 0,
             "false_positives": 0,
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "details": [],
-            "confidence_values": []  # Nuovo campo per registrare tutti i valori di confidenza
+            "confidence_values": []
         }
         
         # Crea le directory di output
@@ -60,36 +64,46 @@ class MuloDetector:
             print(f"Modello YOLO caricato con successo!")
             print(f"Parametri del modello: {self.yolo_model.model.names}")  # Mostra i nomi delle classi
             print(f"Soglia di confidenza impostata a: {self.confidence_threshold}")
+            print(f"Classi del modello: {self.yolo_model.model.names}")  # Mostra i nomi delle classi
+            self.class_names = self.yolo_model.model.names  # Salva i nomi delle classi
             
         except ImportError:
             raise ImportError("La libreria ultralytics (YOLO) non è installata. Installala con 'pip install ultralytics'")
     
-    def detect_mulo(self, image_path):
+    def detect_object(self, image_path):
         """
-        Rileva se l'immagine contiene un mulo utilizzando il modello YOLO.
+        Rileva se l'immagine contiene un oggetto (mulo o lama) utilizzando il modello YOLO.
         
         Args:
             image_path: Percorso dell'immagine da analizzare
             
         Returns:
-            Tupla (x_center, y_center, detection_method, is_mulo_detected, is_in_mulo_folder)
+            Tupla (class_id, x_center, y_center, detection_method, is_object_detected, expected_class)
         """
         img_name = os.path.basename(image_path)
-        is_in_mulo_folder = "Mulo" == os.path.basename(os.path.dirname(image_path))
+        
+        # Determina la classe attesa in base alla directory dell'immagine
+        img_dir = os.path.basename(os.path.dirname(image_path))
+        if img_dir == "Mulo":
+            expected_class = 0
+        elif img_dir == "Lama":
+            expected_class = 1
+        else:
+            expected_class = -1
         
         # Verifica che l'immagine esista
         if not os.path.exists(image_path):
             print(f"ERRORE: Immagine non trovata: {image_path}")
-            return None, None, "file_not_found", False, is_in_mulo_folder
+            return None, None, None, "file_not_found", False, expected_class
             
         # Verifica dimensioni immagine prima dell'inferenza
         try:
             with Image.open(image_path) as img:
                 width, height = img.size
-                print(f"DEBUG - Immagine: {img_name}, Dimensioni: {width}x{height}, Categoria: {'Mulo' if is_in_mulo_folder else 'NonMulo'}")
+                print(f"DEBUG - Immagine: {img_name}, Dimensioni: {width}x{height}, Categoria: {img_dir}")
         except Exception as e:
             print(f"ERRORE nell'apertura dell'immagine {image_path}: {e}")
-            return None, None, "invalid_image", False, is_in_mulo_folder
+            return None, None, None, f"invalid_image: {str(e)}", False, expected_class
         
         try:
             # Esegui rilevamento con YOLO
@@ -110,11 +124,16 @@ class MuloDetector:
                 # Se non ci sono rilevamenti con confidenza sufficiente
                 if len(confidences) == 0 or max(confidences) < self.confidence_threshold:
                     print(f"DEBUG - Nessun rilevamento sopra la soglia ({self.confidence_threshold}) per {img_name}")
-                    return None, None, "yolo_no_detection", False, is_in_mulo_folder
+                    return None, None, None, "yolo_no_detection", False, expected_class
                     
                 # Trova l'indice del rilevamento con la confidenza più alta
                 best_idx = np.argmax(confidences)
                 confidence = confidences[best_idx]
+                
+                # Ottieni la classe del rilevamento
+                class_id = 0  # Default a mulo
+                if hasattr(boxes, 'cls') and len(boxes.cls) > 0:
+                    class_id = int(boxes.cls[best_idx].item())
                 
                 # Registra il valore di confidenza per analisi
                 self.stats["confidence_values"].append(float(confidence))
@@ -127,14 +146,15 @@ class MuloDetector:
                 x_center = int((x1 + x2) / 2)
                 y_center = int((y1 + y2) / 2)
                 
-                print(f"DEBUG - Mulo rilevato in {img_name} con confidenza {confidence:.2f} alle coordinate ({x_center}, {y_center})")
-                return x_center, y_center, f"yolo_detection_{confidence:.2f}", True, is_in_mulo_folder
+                class_name = self.class_names.get(class_id, f"classe_{class_id}")
+                print(f"DEBUG - {class_name} rilevato in {img_name} con confidenza {confidence:.2f} alle coordinate ({x_center}, {y_center})")
+                return class_id, x_center, y_center, f"yolo_detection_{confidence:.2f}", True, expected_class
             else:
                 print(f"DEBUG - Nessun rilevamento per {img_name}")
-                return None, None, "yolo_no_detection", False, is_in_mulo_folder
+                return None, None, None, "yolo_no_detection", False, expected_class
         except Exception as e:
             print(f"ERRORE nel rilevamento YOLO per {image_path}: {e}")
-            return None, None, f"yolo_error: {str(e)}", False, is_in_mulo_folder
+            return None, None, None, f"yolo_error: {str(e)}", False, expected_class
     
     def process_image(self, image_path):
         """
@@ -148,18 +168,20 @@ class MuloDetector:
         """
         img_name = os.path.basename(image_path)
         
-        # Rileva il mulo
-        x_center, y_center, detection_method, is_mulo_detected, is_in_mulo_folder = self.detect_mulo(image_path)
+        # Rileva il mulo o altro oggetto
+        class_id, x_center, y_center, detection_method, is_object_detected, expected_class = self.detect_object(image_path)
         
         if x_center is None or y_center is None:
             # Aggiorna le statistiche per immagine non elaborabile
             self.stats["processed_images"] += 1
-            if is_in_mulo_folder:
+            if expected_class == 0:  # Mulo
                 self.stats["mulo_not_detected"] += 1
+            elif expected_class == 1:  # Lama
+                self.stats["lama_not_detected"] += 1
             
             self.stats["details"].append({
                 "image": img_name,
-                "category": "Mulo" if is_in_mulo_folder else "NonMulo",
+                "category": "Mulo" if expected_class == 0 else ("Lama" if expected_class == 1 else "NonMulo"),
                 "status": "failed",
                 "detection_method": detection_method,
                 "coordinates": None
@@ -171,7 +193,7 @@ class MuloDetector:
                 draw = ImageDraw.Draw(img)
                 
                 # Etichette corrette
-                source_label = "IsMulo" if is_in_mulo_folder else "NonMulo"
+                source_label = "IsMulo" if expected_class == 0 else ("IsLama" if expected_class == 1 else "NonMulo")
                 detection_label = "Nessun rilevamento YOLO"
                 
                 try:
@@ -199,8 +221,8 @@ class MuloDetector:
             img = Image.open(image_path)
             draw = ImageDraw.Draw(img)
             
-            # Disegna il punto rosso SOLO se è un mulo rilevato
-            if is_mulo_detected:
+            # Disegna il punto rosso solo se è stato rilevato un oggetto
+            if is_object_detected:
                 point_radius = 5
                 draw.ellipse((x_center-point_radius, y_center-point_radius, 
                             x_center+point_radius, y_center+point_radius), 
@@ -210,8 +232,12 @@ class MuloDetector:
                             outline=(255, 255, 255), width=2)  # Bordo bianco
             
             # Etichette corrette
-            source_label = "IsMulo" if is_in_mulo_folder else "NonMulo"
-            detection_label = "Mulo" if is_mulo_detected else "NonMulo"
+            expected_class_name = "Mulo" if expected_class == 0 else "Lama" if expected_class == 1 else "Sconosciuto"
+            detected_class_name = "Mulo" if class_id == 0 else "Lama" if class_id == 1 else f"Classe_{class_id}"
+            
+            # Definisci le etichette
+            source_label = f"Is{expected_class_name}"
+            detection_label = f"Rilevato: {detected_class_name}"
             
             try:
                 # Prova a usare un font di sistema - se non disponibile, salta questa parte
@@ -239,19 +265,24 @@ class MuloDetector:
         self.stats["processed_images"] += 1
         
         # Statistiche corrette basate sulla categoria e il rilevamento
-        if is_in_mulo_folder and is_mulo_detected:
+        if expected_class == 0 and class_id == 0:  # Atteso mulo, rilevato mulo
             self.stats["mulo_detected"] += 1
-        elif is_in_mulo_folder and not is_mulo_detected:
+        elif expected_class == 0 and class_id != 0:  # Atteso mulo, rilevato altro
             self.stats["mulo_not_detected"] += 1
-        elif not is_in_mulo_folder and is_mulo_detected:
+        elif expected_class == 1 and class_id == 1:  # Atteso lama, rilevato lama
+            self.stats["lama_detected"] += 1
+        elif expected_class == 1 and class_id != 1:  # Atteso lama, rilevato altro
+            self.stats["lama_not_detected"] += 1
+        elif expected_class == -1 and (class_id == 0 or class_id == 1):  # Non atteso, ma rilevato qualcosa
             self.stats["false_positives"] += 1
         
         # Aggiungi dettagli per questa immagine
         self.stats["details"].append({
             "image": img_name,
-            "category": "Mulo" if is_in_mulo_folder else "NonMulo",
-            "status": "success" if ((is_in_mulo_folder and is_mulo_detected) or 
-                                   (not is_in_mulo_folder and not is_mulo_detected)) else "failed",
+            "category": "Mulo" if expected_class == 0 else ("Lama" if expected_class == 1 else "NonMulo"),
+            "status": "success" if ((expected_class == 0 and class_id == 0) or 
+                                  (expected_class == 1 and class_id == 1) or
+                                  (expected_class == -1 and class_id == -1)) else "failed",
             "detection_method": detection_method,
             "coordinates": (x_center, y_center) if x_center is not None else None
         })
@@ -260,7 +291,7 @@ class MuloDetector:
     
     def process_all_images(self):
         """
-        Elabora tutte le immagini nelle cartelle Mulo e NonMulo.
+        Elabora tutte le immagini nelle cartelle Mulo e Lama.
         """
         # Verifica l'esistenza delle cartelle prima di elencare i file
         if not os.path.exists(self.mulo_dir):
@@ -268,6 +299,14 @@ class MuloDetector:
             mulo_images = []
         else:
             mulo_images = [os.path.join(self.mulo_dir, img) for img in os.listdir(self.mulo_dir) 
+                          if img.lower().endswith(('.png', '.jpg', '.jpeg'))]
+                          
+        # Verifica la cartella Lama
+        if not os.path.exists(self.lama_dir):
+            print(f"ATTENZIONE: Cartella {self.lama_dir} non trovata!")
+            lama_images = []
+        else:
+            lama_images = [os.path.join(self.lama_dir, img) for img in os.listdir(self.lama_dir) 
                           if img.lower().endswith(('.png', '.jpg', '.jpeg'))]
         
         if not os.path.exists(self.nonmulo_dir):
@@ -278,8 +317,9 @@ class MuloDetector:
                              if img.lower().endswith(('.png', '.jpg', '.jpeg'))]
         
         self.stats["mulo_images"] = len(mulo_images)
+        self.stats["lama_images"] = len(lama_images)
         self.stats["nonmulo_images"] = len(nonmulo_images)
-        self.stats["total_images"] = self.stats["mulo_images"] + self.stats["nonmulo_images"]
+        self.stats["total_images"] = self.stats["mulo_images"] + self.stats["lama_images"] + self.stats["nonmulo_images"]
         
         # Elabora ogni immagine
         print(f"Elaborazione di {self.stats['mulo_images']} immagini di muli...")
@@ -287,7 +327,12 @@ class MuloDetector:
             print(f"[{idx+1}/{self.stats['mulo_images']}] Elaborazione di {os.path.basename(img_path)}")
             self.process_image(img_path)
         
-        print(f"Elaborazione di {self.stats['nonmulo_images']} immagini di non-muli...")
+        print(f"Elaborazione di {self.stats['lama_images']} immagini di lama...")
+        for idx, img_path in enumerate(lama_images):
+            print(f"[{idx+1}/{self.stats['lama_images']}] Elaborazione di {os.path.basename(img_path)}")
+            self.process_image(img_path)
+            
+        print(f"Elaborazione di {self.stats['nonmulo_images']} immagini di non-muli/non-lama...")
         for idx, img_path in enumerate(nonmulo_images):
             print(f"[{idx+1}/{self.stats['nonmulo_images']}] Elaborazione di {os.path.basename(img_path)}")
             self.process_image(img_path)
@@ -297,24 +342,30 @@ class MuloDetector:
         Genera un report dettagliato delle statistiche di elaborazione.
         """
         # Calcola tassi finali
-        if self.stats["mulo_images"] > 0:
-            self.stats["success_rate"] = (self.stats["mulo_detected"] / self.stats["mulo_images"]) * 100
+        total_mulo_lama = self.stats["mulo_images"] + self.stats["lama_images"]
+        total_detected = self.stats["mulo_detected"] + self.stats["lama_detected"]
+        
+        if total_mulo_lama > 0:
+            self.stats["success_rate"] = (total_detected / total_mulo_lama) * 100
             self.stats["failure_rate"] = 100 - self.stats["success_rate"]
         
         # Genera report testuale
         report_path = os.path.join(self.output_dir, "report.txt")
         with open(report_path, "w") as f:
-            f.write("=== REPORT RILEVAMENTO MULI CON YOLO ===\n")
-            f.write(f"Data e ora: {self.stats['timestamp']}\n\n")
+            f.write("=== REPORT RILEVAMENTO MULI E LAMA CON YOLO ===\n")
+            f.write(f"Data e ora: {self.stats['timestamp']}\n")
             f.write(f"Soglia di confidenza: {self.confidence_threshold}\n\n")
             f.write(f"Totale immagini elaborate: {self.stats['total_images']}\n")
             f.write(f"- Immagini di muli: {self.stats['mulo_images']}\n")
-            f.write(f"- Immagini non-muli: {self.stats['nonmulo_images']}\n\n")
+            f.write(f"- Immagini di lama: {self.stats['lama_images']}\n")
+            f.write(f"- Immagini non-oggetti: {self.stats['nonmulo_images']}\n\n")
             f.write(f"Muli rilevati correttamente: {self.stats['mulo_detected']}\n")
             f.write(f"Muli non rilevati: {self.stats['mulo_not_detected']}\n")
+            f.write(f"Lama rilevati correttamente: {self.stats['lama_detected']}\n")
+            f.write(f"Lama non rilevati: {self.stats['lama_not_detected']}\n")
             f.write(f"Falsi positivi: {self.stats['false_positives']}\n\n")
-            f.write(f"Tasso di successo: {self.stats['success_rate']:.2f}%\n")
-            f.write(f"Tasso di fallimento: {self.stats['failure_rate']:.2f}%\n\n")
+            f.write(f"Tasso di successo complessivo: {self.stats['success_rate']:.2f}%\n")
+            f.write(f"Tasso di fallimento complessivo: {self.stats['failure_rate']:.2f}%\n\n")
             f.write("=== DETTAGLI ELABORAZIONE ===\n")
             
             for detail in self.stats["details"]:
@@ -339,7 +390,7 @@ class MuloDetector:
         """
         Genera grafici per visualizzare le statistiche.
         """
-        # Grafico a torta per il tasso di successo/fallimento
+        # Grafico a torta per il tasso di successo/fallimento dei muli
         if self.stats["mulo_images"] > 0:  # Previeni divisione per zero
             plt.figure(figsize=(10, 6))
             labels = ["Rilevati", "Non rilevati"]
@@ -348,21 +399,37 @@ class MuloDetector:
             plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
             plt.axis('equal')
             plt.title(f"Tasso di rilevamento muli con YOLO (soglia: {self.confidence_threshold})")
-            plt.savefig(os.path.join(self.output_dir, "detection_rate.png"))
+            plt.savefig(os.path.join(self.output_dir, "mulo_detection_rate.png"))
+            plt.close()
+        
+        # Grafico a torta per il tasso di successo/fallimento dei lama
+        if self.stats["lama_images"] > 0:  # Previeni divisione per zero
+            plt.figure(figsize=(10, 6))
+            labels = ["Rilevati", "Non rilevati"]
+            sizes = [self.stats["lama_detected"], self.stats["lama_not_detected"]]
+            colors = ["#4CAF50", "#F44336"]
+            plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+            plt.axis('equal')
+            plt.title(f"Tasso di rilevamento lama con YOLO (soglia: {self.confidence_threshold})")
+            plt.savefig(os.path.join(self.output_dir, "lama_detection_rate.png"))
             plt.close()
         
         # Grafico a barre per le categorie di immagini
         plt.figure(figsize=(12, 6))
-        categories = ["Totale", "Muli", "Non-Muli", "Rilevati", "Non rilevati", "Falsi positivi"]
+        categories = ["Totale", "Muli", "Lama", "Non-Oggetti", "Muli\nRilevati", "Muli\nNon rilevati", 
+                      "Lama\nRilevati", "Lama\nNon rilevati", "Falsi\npositivi"]
         values = [
             self.stats["total_images"],
             self.stats["mulo_images"],
+            self.stats["lama_images"],
             self.stats["nonmulo_images"],
             self.stats["mulo_detected"],
             self.stats["mulo_not_detected"],
+            self.stats["lama_detected"],
+            self.stats["lama_not_detected"],
             self.stats["false_positives"]
         ]
-        colors = ["#2196F3", "#4CAF50", "#FFC107", "#9C27B0", "#F44336", "#FF9800"]
+        colors = ["#2196F3", "#4CAF50", "#9C27B0", "#FFC107", "#00BCD4", "#F44336", "#673AB7", "#FF5722", "#FF9800"]
         
         plt.bar(categories, values, color=colors)
         plt.ylabel("Numero di immagini")
@@ -388,10 +455,9 @@ class MuloDetector:
         
         # Grafico a barre delle confidenze per ogni immagine rilevata
         detections = [detail for detail in self.stats["details"] 
-                     if detail["status"] == "success" and detail["category"] == "Mulo"]
+                     if "success" in detail["status"] and "yolo_detection" in detail["detection_method"]]
         
         if detections:
-            plt.figure(figsize=(14, 8))
             image_names = [d["image"] for d in detections]
             confidences = []
             
@@ -413,7 +479,7 @@ class MuloDetector:
             plt.axhline(y=self.confidence_threshold, color='r', linestyle='--', label=f'Soglia ({self.confidence_threshold})')
             plt.xlabel("Immagine")
             plt.ylabel("Confidenza")
-            plt.title("Confidenza per ogni mulo rilevato (ordinato)")
+            plt.title("Confidenza per ogni oggetto rilevato (ordinato)")
             plt.xticks(range(len(confidences)), image_names, rotation=90)
             plt.tight_layout()
             plt.grid(axis='y', alpha=0.3)
@@ -450,6 +516,14 @@ class MuloDetector:
                     if len(results[0].boxes) > 0:
                         boxes = results[0].boxes
                         confidences = boxes.conf.cpu().numpy()
+                        
+                        # Ottieni informazioni sulla classe
+                        classes = []
+                        if hasattr(boxes, 'cls') and len(boxes.cls) > 0:
+                            classes = boxes.cls.cpu().numpy()
+                            class_names = [self.class_names.get(int(cls), f"classe_{int(cls)}") for cls in classes]
+                            print(f"Classi rilevate: {class_names}")
+                        
                         print(f"Rilevamenti: {len(confidences)}")
                         print(f"Confidenze: {confidences}")
                         
